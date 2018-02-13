@@ -1,0 +1,24 @@
+﻿
+@if (Session["TOVALIDAR"] == null)
+{
+    <h1>TOVALIDAR NULL</h1>
+}
+else
+{
+    using (Html.BeginForm())
+    {
+
+    <h1 style="color:azure">Login</h1>
+    <label style="color:azure">usuario: </label> <input type="text" name="usuario" />
+    <label style="color:azure">passw: </label><input type="text" name="pass" />
+    <button type="submit">OK</button>
+    }
+}
+@if (Session["VALIDADO"] == null)
+{
+    <h1>NO VALIDADO</h1>
+}
+else{
+    <h1>VALIDADO</h1>
+}
+

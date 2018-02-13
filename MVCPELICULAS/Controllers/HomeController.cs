@@ -26,5 +26,16 @@ namespace MVCPELICULAS.Controllers
 
             return View();
         }
+
+        
+        public ActionResult _Login(String usuario,String pass)
+        {
+            Session["TOVALIDAR"] = true;
+            if(usuario=="admin"&& pass == "admin")
+            {
+                Session["VALIDADO"] = true;
+            }
+            return View();
+        }
     }
 }
