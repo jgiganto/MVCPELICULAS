@@ -1,24 +1,27 @@
 ﻿
 @if (Session["TOVALIDAR"] == null)
 {
-    <h1>TOVALIDAR NULL</h1>
+    <label>primer</label>
 }
 else
 {
     using (Html.BeginForm())
     {
 
-    <h1 style="color:azure">Login</h1>
-    <label style="color:azure">usuario: </label> <input type="text" name="usuario" />
-    <label style="color:azure">passw: </label><input type="text" name="pass" />
-    <button type="submit">OK</button>
+        <h1 style="color:azure">Login</h1>
+        <label style="color:azure">usuario: </label> <input type="text" name="usuario" />
+        <label style="color:azure">passw: </label><input type="text" name="pass" />
+        <button type="submit">OK</button>
     }
 }
+
 @if (Session["VALIDADO"] == null)
 {
-    <h1>NO VALIDADO</h1>
+    <h6 style="color:azure">@ViewBag.fallopw</h6>
+    <h6 style="color:red">@ViewBag.fallopwred</h6>
 }
-else{
-    <h1>VALIDADO</h1>
+else
+{
+    <h6 style="color:lawngreen">Hola admin</h6>
 }
 
